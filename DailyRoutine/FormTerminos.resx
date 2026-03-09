@@ -117,4 +117,77 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Última actualización: 2026
+
+1. Aceptación de los términos
+
+Al registrarse y utilizar el Sistema de Recordatorios DailyRoutine (en adelante “la aplicación”), el usuario acepta cumplir con los presentes Términos y Condiciones. Si no está de acuerdo con alguno de ellos, deberá abstenerse de utilizar el sistema.
+
+2. Descripción del servicio
+
+La aplicación permite a los usuarios:
+
+Crear rutinas y actividades.
+
+Establecer fechas y horarios.
+
+Recibir recordatorios.
+
+Administrar tareas personales.
+
+Consultar estadísticas relacionadas con sus actividades.
+
+El sistema está diseñado únicamente para fines organizativos y personales.
+
+3. Responsabilidad del usuario
+
+El usuario se compromete a:
+
+Proporcionar información verídica al registrarse.
+
+Mantener la confidencialidad de su contraseña.
+
+No utilizar la aplicación para fines ilegales o indebidos.
+
+No intentar vulnerar la seguridad del sistema.
+
+La aplicación no se hace responsable por la pérdida de información derivada de un uso indebido por parte del usuario.
+
+4. Protección de datos
+
+La información proporcionada (correo electrónico y datos de rutinas) será utilizada exclusivamente para el funcionamiento del sistema.
+
+No se compartirá información personal con terceros sin el consentimiento del usuario, salvo requerimiento legal.
+
+5. Disponibilidad del servicio
+
+La aplicación puede estar sujeta a:
+
+Mantenimiento técnico.
+
+Actualizaciones.
+
+Interrupciones temporales.
+
+No se garantiza disponibilidad ininterrumpida del servicio.
+
+6. Eliminación de cuenta
+
+El usuario podrá solicitar la eliminación de su cuenta.
+Al eliminarla, toda la información asociada podrá ser eliminada permanentemente de la base de datos.
+
+7. Modificaciones
+
+La aplicación se reserva el derecho de modificar estos términos en cualquier momento. Los cambios serán publicados dentro del sistema.
+
+8. Limitación de responsabilidad
+
+La aplicación no garantiza que los recordatorios sustituyan responsabilidades legales, médicas, académicas o laborales.
+El usuario es responsable de verificar sus actividades programadas.
+
+9. Contacto
+
+Para soporte o reportes, el usuario podrá utilizar la sección de Reportes dentro de la aplicación.</value>
+  </data>
 </root>

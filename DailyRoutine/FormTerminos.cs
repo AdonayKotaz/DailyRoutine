@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace DailyRoutine
 {
-    public partial class FormCuenta : Form
+    public partial class FormTerminos : Form
     {
-        public FormCuenta()
+        public FormTerminos()
         {
             InitializeComponent();
         }
 
-        private void FormCuenta_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void modernContainer1_Paint(object sender, PaintEventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
