@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel2 = new Panel();
+            dateTimePicker2 = new DateTimePicker();
             dateTimePicker1 = new DateTimePicker();
             modernContainer1 = new ModernContainer();
             textBox2 = new TextBox();
@@ -46,7 +47,6 @@
             panel4 = new Panel();
             LblInicio = new Label();
             pictureBox1 = new PictureBox();
-            dateTimePicker2 = new DateTimePicker();
             panel2.SuspendLayout();
             modernContainer1.SuspendLayout();
             modernContainer4.SuspendLayout();
@@ -72,6 +72,17 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(590, 347);
             panel2.TabIndex = 1;
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.CalendarTitleForeColor = Color.Red;
+            dateTimePicker2.CustomFormat = "hh:mm tt";
+            dateTimePicker2.Format = DateTimePickerFormat.Custom;
+            dateTimePicker2.Location = new Point(40, 194);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.ShowUpDown = true;
+            dateTimePicker2.Size = new Size(83, 23);
+            dateTimePicker2.TabIndex = 5;
             // 
             // dateTimePicker1
             // 
@@ -270,17 +281,6 @@
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
-            // dateTimePicker2
-            // 
-            dateTimePicker2.CalendarTitleForeColor = Color.Red;
-            dateTimePicker2.CustomFormat = "hh:mm tt";
-            dateTimePicker2.Format = DateTimePickerFormat.Custom;
-            dateTimePicker2.Location = new Point(40, 194);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.ShowUpDown = true;
-            dateTimePicker2.Size = new Size(83, 23);
-            dateTimePicker2.TabIndex = 5;
-            // 
             // FormAgregar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -292,7 +292,7 @@
             Controls.Add(panel2);
             ForeColor = Color.FromArgb(217, 217, 217);
             Name = "FormAgregar";
-            Text = "FormAgregar";
+            Text = "Daily Routine";
             Load += FormAgregar_Load;
             panel2.ResumeLayout(false);
             modernContainer1.ResumeLayout(false);

@@ -168,7 +168,7 @@
             Controls.Add(modernContainer3);
             Controls.Add(modernContainer2);
             Name = "FormLogin";
-            Text = "FormLogin";
+            Text = "Daily Routine";
             modernContainer1.ResumeLayout(false);
             modernContainer1.PerformLayout();
             modernContainer2.ResumeLayout(false);

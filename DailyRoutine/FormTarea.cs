@@ -40,8 +40,8 @@ namespace DailyRoutine
         private void CargarComboRutinas()
         {
             string connectionString = "Server=localhost;Database=DailyRoutine;Uid=root;Pwd=Adonay14.;";
-            // Filtramos por el ID de la sesión global que ya verificamos antes
-            string query = "SELECT Id_rutina, Nombre FROM rutina WHERE Id_Usuario = @idUser";
+            // Filtramos por Estado 1 y ordenamos para que sea más fácil de usar
+            string query = "SELECT Id_rutina, Nombre, Hora FROM rutina WHERE Id_Usuario = @idUser AND Estado = 1 ORDER BY Hora ASC";
 
             using (MySqlConnection conexion = new MySqlConnection(connectionString))
             {
@@ -51,43 +51,69 @@ namespace DailyRoutine
                     MySqlCommand comando = new MySqlCommand(query, conexion);
                     comando.Parameters.AddWithValue("@idUser", UsuarioSesion.IdUsuario);
 
-                    MySqlDataAdapter da = new MySqlDataAdapter(comando);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
+                    List<RutinaItem> listaRutinas = new List<RutinaItem>();
 
-                    // 1. Qué valor se guarda internamente (el ID)
-                    cmbRutinas.ValueMember = "Id_rutina";
+                    using (MySqlDataReader reader = comando.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            listaRutinas.Add(new RutinaItem
+                            {
+                                Id = reader.GetInt32("Id_rutina"),
+                                Nombre = reader.GetString("Nombre"),
+                                HoraInicio = reader.GetTimeSpan("Hora") // Guardamos la hora para validar
+                            });
+                        }
+                    }
 
-                    // 2. Qué texto ve el usuario (el Nombre de la rutina)
+                    // Configuramos el ComboBox
+                    cmbRutinas.DataSource = null; // Limpiamos primero
                     cmbRutinas.DisplayMember = "Nombre";
-
-                    // 3. Asignamos la fuente de datos
-                    cmbRutinas.DataSource = dt;
+                    cmbRutinas.ValueMember = "Id";
+                    cmbRutinas.DataSource = listaRutinas;
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error al cargar las rutinas: " + ex.Message);
                 }
-
             }
+        }
+
+        public class RutinaItem
+        {
+            public int Id { get; set; }
+            public string Nombre { get; set; }
+            public TimeSpan HoraInicio { get; set; }
+
+            // Esto es lo que se verá en el ComboBox si no se usa DisplayMember
+            public override string ToString() => Nombre;
         }
 
         // guardar datos
 
         private void btnGuardarActividad_Click(object sender, EventArgs e)
         {
-            // 1. Validaciones básicas para evitar datos vacíos
-            if (string.IsNullOrWhiteSpace(textBox1.Text) || cmbRutinas.SelectedValue == null)
+            // 1. Validaciones básicas y obtención del objeto seleccionado
+            var rutinaSeleccionada = (RutinaItem)cmbRutinas.SelectedItem;
+
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || rutinaSeleccionada == null)
             {
                 MessageBox.Show("Por favor, ingresa el nombre de la actividad y selecciona una rutina.");
                 return;
             }
 
-            // 2. Tu cadena de conexión
-            string connectionString = "Server=localhost;Database=DailyRoutine;Uid=root;Pwd=Adonay14.;";
+            // 2. Validación de lógica de tiempo: La tarea debe ser DESPUÉS del inicio de la rutina
+            // Usamos .TimeOfDay para obtener solo la hora del selector
+            TimeSpan horaTarea = dateTimePicker1.Value.TimeOfDay;
 
-            // 3. Consulta SQL con parámetros
-            // Asegúrate de que los nombres de las columnas coincidan exactamente con tu tabla 'actividad'
+            if (horaTarea <= rutinaSeleccionada.HoraInicio)
+            {
+                MessageBox.Show($"La actividad debe iniciar después de la hora de la rutina ({rutinaSeleccionada.HoraInicio:hh\\:mm}).");
+                return;
+            }
+
+            // 3. Cadena de conexión y consulta
+            string connectionString = "Server=localhost;Database=DailyRoutine;Uid=root;Pwd=Adonay14.;";
             string query = "INSERT INTO actividad (Nombre, Descripcion, Hora_Inicio, Id_Rutina) " +
                            "VALUES (@nombre, @desc, @hora, @idRutina)";
 
@@ -98,27 +124,20 @@ namespace DailyRoutine
                     conexion.Open();
                     MySqlCommand comando = new MySqlCommand(query, conexion);
 
-                    // 4. Asignamos los valores de los controles a los parámetros
-                    // Nombre de la actividad
+                    // 4. Asignación de parámetros corregida para evitar errores de tipo
                     comando.Parameters.AddWithValue("@nombre", textBox1.Text.Trim());
-
-                    // Descripción de la actividad
                     comando.Parameters.AddWithValue("@desc", textBox2.Text.Trim());
 
-                    // Hora_Inicio desde el DateTimePicker (formato HH:mm:ss para MySQL)
-                    comando.Parameters.AddWithValue("@hora", dateTimePicker1.Value.ToString("HH:mm:ss"));
+                    // Enviamos el TimeSpan directamente, MySqlConnector lo mapea correctamente al tipo TIME
+                    comando.Parameters.AddWithValue("@hora", horaTarea);
 
-                    // Id_Rutina obtenido del ComboBox (ValueMember)
-                    comando.Parameters.AddWithValue("@idRutina", cmbRutinas.SelectedValue);
+                    comando.Parameters.AddWithValue("@idRutina", rutinaSeleccionada.Id);
 
-                    // 5. Ejecutar la operación
                     int filasAffected = comando.ExecuteNonQuery();
 
                     if (filasAffected > 0)
                     {
-                        MessageBox.Show("¡Actividad guardada y asignada a la rutina correctamente!");
-
-                        // Opcional: Limpiar los campos para una nueva entrada
+                        MessageBox.Show("¡Actividad guardada correctamente!");
                         LimpiarCampos();
                     }
                 }
@@ -185,10 +204,13 @@ namespace DailyRoutine
             if (string.IsNullOrWhiteSpace(textBox2.Text))
             {
                 textBox2.Text = placeholder2;
-                textBox2.ForeColor = Color.Gray;                
+                textBox2.ForeColor = Color.Gray;
             }
         }
 
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

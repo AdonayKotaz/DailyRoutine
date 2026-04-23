@@ -99,52 +99,64 @@ namespace DailyRoutine
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            // 1. Cadena de conexión
             string connectionString = "Server=localhost;Database=DailyRoutine;Uid=root;Pwd=Adonay14.;";
-
-            // 2. MODIFICACIÓN: Seleccionamos el Id_usuario en lugar de solo contar
-            // Asegúrate de que el nombre del campo sea exacto (Id_usuario o Id, según tu tabla)
-            string query = "SELECT Id_usuario FROM usuario WHERE Gmail = @correo AND contrasena = @pass";
+            string correoOUser = textBox1.Text.Trim();
+            string pass = textBox2.Text.Trim();
 
             using (MySqlConnection conexion = new MySqlConnection(connectionString))
             {
                 try
                 {
                     conexion.Open();
-                    MySqlCommand comando = new MySqlCommand(query, conexion);
 
-                    // 3. Parámetros de seguridad
-                    comando.Parameters.AddWithValue("@correo", textBox1.Text.Trim());
-                    comando.Parameters.AddWithValue("@pass", textBox2.Text.Trim());
+                    // --- INTENTO 1: LOGIN COMO USUARIO ---
+                    // Solo pedimos Id_usuario y Gmail (ya que no hay 'Nombre')
+                    string queryUser = "SELECT Id_usuario, Gmail FROM usuario WHERE Gmail = @correo AND contrasena = @pass";
+                    MySqlCommand cmdUser = new MySqlCommand(queryUser, conexion);
+                    cmdUser.Parameters.AddWithValue("@correo", correoOUser);
+                    cmdUser.Parameters.AddWithValue("@pass", pass);
 
-                    // 4. MODIFICACIÓN: Ejecutamos y recibimos el objeto (el ID)
-                    object resultado = comando.ExecuteScalar();
-
-                    if (resultado != null) // Si el resultado no es nulo, es que los datos son correctos
+                    using (MySqlDataReader readerUser = cmdUser.ExecuteReader())
                     {
-                        // ¡Éxito! GUARDAMOS EL ID EN TU CLASE GLOBAL
-                        UsuarioSesion.IdUsuario = Convert.ToInt32(resultado);
-                        UsuarioSesion.Correo = textBox1.Text.Trim(); // Opcional: guardar también el correo
+                        if (readerUser.Read())
+                        {
+                            UsuarioSesion.IdUsuario = Convert.ToInt32(readerUser["Id_usuario"]);
+                            // Usamos el Gmail como nombre ya que no hay columna Nombre
+                            UsuarioSesion.Correo = readerUser["Gmail"].ToString();
 
-                        MessageBox.Show("¡Bienvenido!");
-
-                        // 5. Navegar al FormInicio
-                        FormInicio inicio = new FormInicio();
-                        inicio.Show();
-
-                        this.Hide();
+                            MessageBox.Show("¡Bienvenido!");
+                            new FormInicio().Show();
+                            this.Hide();
+                            return;
+                        }
                     }
-                    else
+
+                    // --- INTENTO 2: LOGIN COMO ADMINISTRADOR ---
+                    // Aquí sí usamos 'Nombre' porque en la tabla administrador sí existe
+                    string queryAdmin = "SELECT Id_Admin, Nombre FROM administrador WHERE Nombre = @nom AND Contraseña = @pass";
+                    MySqlCommand cmdAdmin = new MySqlCommand(queryAdmin, conexion);
+                    cmdAdmin.Parameters.AddWithValue("@nom", correoOUser);
+                    cmdAdmin.Parameters.AddWithValue("@pass", pass);
+
+                    using (MySqlDataReader readerAdmin = cmdAdmin.ExecuteReader())
                     {
-                        // Si resultado es null, no hubo coincidencias
-                        MessageBox.Show("Correo o contraseña incorrectos. Inténtalo de nuevo.");
-                        textBox2.Clear();
-                        textBox2.Focus();
+                        if (readerAdmin.Read())
+                        {
+                            AdminSesion.IdAdmin = Convert.ToInt32(readerAdmin["Id_Admin"]);
+                            AdminSesion.NombreAdmin = readerAdmin["Nombre"].ToString();
+
+                            MessageBox.Show("Acceso de Administrador: " + AdminSesion.NombreAdmin);
+                            new FormAdmin().Show();
+                            this.Hide();
+                            return;
+                        }
                     }
+
+                    MessageBox.Show("Correo/Usuario o contraseña incorrectos.");
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al conectar: " + ex.Message);
+                    MessageBox.Show("Error de base de datos: " + ex.Message);
                 }
             }
         }

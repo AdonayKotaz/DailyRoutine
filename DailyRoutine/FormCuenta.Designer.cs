@@ -28,24 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCuenta));
             mySqlConnection1 = new MySqlConnector.MySqlConnection();
             mySqlConnection2 = new MySqlConnector.MySqlConnection();
-            pictureBox1 = new PictureBox();
+            label1 = new Label();
+            modernContainer3 = new ModernContainer();
+            label4 = new Label();
             pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            pictureBox5 = new PictureBox();
-            modernContainer1 = new ModernContainer();
+            richTextBox1 = new RichTextBox();
+            label2 = new Label();
             modernContainer2 = new ModernContainer();
-            pictureBox6 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            label3 = new Label();
+            pictureBox1 = new PictureBox();
+            modernContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            modernContainer1.SuspendLayout();
             modernContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // mySqlConnection1
@@ -60,119 +58,150 @@
             mySqlConnection2.ProvidePasswordCallback = null;
             mySqlConnection2.RemoteCertificateValidationCallback = null;
             // 
-            // pictureBox1
+            // label1
             // 
-            pictureBox1.Location = new Point(48, 30);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 50);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(45, 55, 72);
+            label1.Location = new Point(24, 115);
+            label1.Name = "label1";
+            label1.Size = new Size(221, 21);
+            label1.TabIndex = 7;
+            label1.Text = "Adonaypalma58@gmail.com";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // modernContainer3
+            // 
+            modernContainer3.BackColor = Color.Transparent;
+            modernContainer3.BorderRadius = 20;
+            modernContainer3.Controls.Add(label4);
+            modernContainer3.Controls.Add(pictureBox2);
+            modernContainer3.Cursor = Cursors.Hand;
+            modernContainer3.Location = new Point(34, 139);
+            modernContainer3.Name = "modernContainer3";
+            modernContainer3.PanelColor = Color.IndianRed;
+            modernContainer3.ShadowColor = Color.Blue;
+            modernContainer3.ShadowOpacity = 90;
+            modernContainer3.ShadowSize = 15;
+            modernContainer3.Size = new Size(185, 61);
+            modernContainer3.TabIndex = 8;
+            modernContainer3.Click += btnSalir_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            label4.ForeColor = Color.FromArgb(45, 55, 72);
+            label4.Location = new Point(56, 21);
+            label4.Name = "label4";
+            label4.Size = new Size(98, 20);
+            label4.TabIndex = 13;
+            label4.Text = "Cerrar sesión";
+            label4.Click += btnSalir_Click;
             // 
             // pictureBox2
             // 
-            pictureBox2.Location = new Point(32, 120);
+            pictureBox2.Image = Properties.Resources._3;
+            pictureBox2.Location = new Point(25, 19);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(28, 33);
-            pictureBox2.TabIndex = 1;
+            pictureBox2.Size = new Size(25, 24);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 7;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += btnSalir_Click;
             // 
-            // pictureBox3
+            // richTextBox1
             // 
-            pictureBox3.Location = new Point(32, 184);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(28, 33);
-            pictureBox3.TabIndex = 2;
-            pictureBox3.TabStop = false;
+            richTextBox1.Location = new Point(13, 231);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(232, 60);
+            richTextBox1.TabIndex = 9;
+            richTextBox1.Text = "";
             // 
-            // pictureBox4
+            // label2
             // 
-            pictureBox4.Location = new Point(32, 249);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(28, 33);
-            pictureBox4.TabIndex = 3;
-            pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.Location = new Point(32, 310);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(28, 33);
-            pictureBox5.TabIndex = 4;
-            pictureBox5.TabStop = false;
-            // 
-            // modernContainer1
-            // 
-            modernContainer1.BackColor = Color.Transparent;
-            modernContainer1.BorderRadius = 30;
-            modernContainer1.Controls.Add(pictureBox1);
-            modernContainer1.Location = new Point(69, 12);
-            modernContainer1.Name = "modernContainer1";
-            modernContainer1.PanelColor = Color.FromArgb(245, 245, 245);
-            modernContainer1.ShadowColor = Color.Black;
-            modernContainer1.ShadowOpacity = 90;
-            modernContainer1.ShadowSize = 15;
-            modernContainer1.Size = new Size(200, 100);
-            modernContainer1.TabIndex = 5;
-            modernContainer1.Paint += modernContainer1_Paint;
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            label2.ForeColor = Color.FromArgb(45, 55, 72);
+            label2.Location = new Point(13, 213);
+            label2.Name = "label2";
+            label2.Size = new Size(97, 15);
+            label2.TabIndex = 10;
+            label2.Text = "Enviar un reporte";
             // 
             // modernContainer2
             // 
             modernContainer2.BackColor = Color.Transparent;
-            modernContainer2.BorderRadius = 20;
-            modernContainer2.Controls.Add(pictureBox6);
-            modernContainer2.Location = new Point(45, 359);
+            modernContainer2.BorderRadius = 30;
+            modernContainer2.Controls.Add(label3);
+            modernContainer2.Cursor = Cursors.Hand;
+            modernContainer2.Location = new Point(160, 283);
             modernContainer2.Name = "modernContainer2";
-            modernContainer2.PanelColor = Color.Gray;
-            modernContainer2.ShadowColor = Color.Blue;
+            modernContainer2.PanelColor = Color.FromArgb(45, 55, 72);
+            modernContainer2.ShadowColor = Color.Black;
             modernContainer2.ShadowOpacity = 90;
             modernContainer2.ShadowSize = 15;
-            modernContainer2.Size = new Size(233, 61);
-            modernContainer2.TabIndex = 6;
+            modernContainer2.Size = new Size(95, 50);
+            modernContainer2.TabIndex = 11;
+            modernContainer2.Click += btnEnviarReporte_Click;
             // 
-            // pictureBox6
+            // label3
             // 
-            pictureBox6.Location = new Point(25, 19);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(25, 24);
-            pictureBox6.TabIndex = 7;
-            pictureBox6.TabStop = false;
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            label3.ForeColor = Color.WhiteSmoke;
+            label3.Location = new Point(28, 17);
+            label3.Name = "label3";
+            label3.Size = new Size(42, 15);
+            label3.TabIndex = 12;
+            label3.Text = "Enviar ";
+            label3.Click += btnEnviarReporte_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(70, 9);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(123, 124);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 12;
+            pictureBox1.TabStop = false;
             // 
             // FormCuenta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(329, 450);
+            ClientSize = new Size(257, 328);
+            Controls.Add(label2);
+            Controls.Add(richTextBox1);
+            Controls.Add(modernContainer3);
+            Controls.Add(label1);
             Controls.Add(modernContainer2);
-            Controls.Add(pictureBox5);
-            Controls.Add(pictureBox4);
-            Controls.Add(pictureBox3);
-            Controls.Add(pictureBox2);
-            Controls.Add(modernContainer1);
+            Controls.Add(pictureBox1);
             Name = "FormCuenta";
-            Text = "FormCuenta";
+            Text = "Cuenta";
             Load += FormCuenta_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            modernContainer3.ResumeLayout(false);
+            modernContainer3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            modernContainer1.ResumeLayout(false);
             modernContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            modernContainer2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private MySqlConnector.MySqlConnection mySqlConnection1;
         private MySqlConnector.MySqlConnection mySqlConnection2;
-        private PictureBox pictureBox1;
+        private Label label1;
+        private ModernContainer modernContainer3;
         private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox5;
-        private ModernContainer modernContainer1;
+        private RichTextBox richTextBox1;
+        private Label label2;
         private ModernContainer modernContainer2;
-        private PictureBox pictureBox6;
+        private Label label3;
+        private Label label4;
+        private PictureBox pictureBox1;
     }
 }

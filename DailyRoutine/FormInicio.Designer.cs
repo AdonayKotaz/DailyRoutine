@@ -39,6 +39,22 @@
             LblInicio = new Label();
             pictureBox1 = new PictureBox();
             modernContainer2 = new ModernContainer();
+            modernContainer13 = new ModernContainer();
+            labelMinutos3 = new Label();
+            modernContainer14 = new ModernContainer();
+            pictureBox6 = new PictureBox();
+            modernContainer15 = new ModernContainer();
+            pictureBox7 = new PictureBox();
+            labelDescripcion3 = new Label();
+            labelActividad3 = new Label();
+            modernContainer4 = new ModernContainer();
+            labelMinutos2 = new Label();
+            modernContainer5 = new ModernContainer();
+            pictureBox4 = new PictureBox();
+            modernContainer12 = new ModernContainer();
+            pictureBox5 = new PictureBox();
+            labelDescripcion2 = new Label();
+            labelActividad2 = new Label();
             modernContainer3 = new ModernContainer();
             labelMinutos1 = new Label();
             modernContainer10 = new ModernContainer();
@@ -49,6 +65,7 @@
             labelActividad1 = new Label();
             labelFecha = new Label();
             labelNombre = new Label();
+            pictureBox9 = new PictureBox();
             label2 = new Label();
             modernContainer1 = new ModernContainer();
             label3 = new Label();
@@ -63,48 +80,35 @@
             labelProxT1 = new Label();
             labelProx1 = new Label();
             label4 = new Label();
-            modernContainer4 = new ModernContainer();
-            labelMinutos2 = new Label();
-            modernContainer5 = new ModernContainer();
-            pictureBox4 = new PictureBox();
-            modernContainer12 = new ModernContainer();
-            pictureBox5 = new PictureBox();
-            labelDescripcion2 = new Label();
-            labelActividad2 = new Label();
-            modernContainer13 = new ModernContainer();
-            labelMinutos3 = new Label();
-            modernContainer14 = new ModernContainer();
-            pictureBox6 = new PictureBox();
-            modernContainer15 = new ModernContainer();
-            pictureBox7 = new PictureBox();
-            labelDescripcion3 = new Label();
-            labelActividad3 = new Label();
+            pictureBox8 = new PictureBox();
             panelContenedor.SuspendLayout();
             panel6.SuspendLayout();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             modernContainer2.SuspendLayout();
-            modernContainer3.SuspendLayout();
-            modernContainer10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            modernContainer11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            modernContainer1.SuspendLayout();
-            modernContainer6.SuspendLayout();
-            modernContainer9.SuspendLayout();
-            modernContainer8.SuspendLayout();
-            modernContainer7.SuspendLayout();
-            modernContainer4.SuspendLayout();
-            modernContainer5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            modernContainer12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             modernContainer13.SuspendLayout();
             modernContainer14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             modernContainer15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            modernContainer4.SuspendLayout();
+            modernContainer5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            modernContainer12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            modernContainer3.SuspendLayout();
+            modernContainer10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            modernContainer11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            modernContainer1.SuspendLayout();
+            modernContainer6.SuspendLayout();
+            modernContainer9.SuspendLayout();
+            modernContainer8.SuspendLayout();
+            modernContainer7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -226,6 +230,208 @@
             modernContainer2.Size = new Size(414, 346);
             modernContainer2.TabIndex = 8;
             // 
+            // modernContainer13
+            // 
+            modernContainer13.BackColor = Color.Transparent;
+            modernContainer13.BorderRadius = 15;
+            modernContainer13.Controls.Add(labelMinutos3);
+            modernContainer13.Controls.Add(modernContainer14);
+            modernContainer13.Controls.Add(modernContainer15);
+            modernContainer13.Controls.Add(labelDescripcion3);
+            modernContainer13.Controls.Add(labelActividad3);
+            modernContainer13.Location = new Point(15, 232);
+            modernContainer13.Name = "modernContainer13";
+            modernContainer13.PanelColor = Color.White;
+            modernContainer13.ShadowColor = Color.Black;
+            modernContainer13.ShadowOpacity = 255;
+            modernContainer13.ShadowSize = 10;
+            modernContainer13.Size = new Size(370, 86);
+            modernContainer13.TabIndex = 7;
+            // 
+            // labelMinutos3
+            // 
+            labelMinutos3.AutoSize = true;
+            labelMinutos3.ForeColor = Color.FromArgb(45, 55, 72);
+            labelMinutos3.ImageAlign = ContentAlignment.BottomLeft;
+            labelMinutos3.Location = new Point(170, 20);
+            labelMinutos3.Name = "labelMinutos3";
+            labelMinutos3.Size = new Size(92, 15);
+            labelMinutos3.TabIndex = 5;
+            labelMinutos3.Text = "- En (0) Minutos";
+            // 
+            // modernContainer14
+            // 
+            modernContainer14.BackColor = Color.Transparent;
+            modernContainer14.BorderRadius = 15;
+            modernContainer14.Controls.Add(pictureBox6);
+            modernContainer14.Location = new Point(211, 25);
+            modernContainer14.Name = "modernContainer14";
+            modernContainer14.PanelColor = Color.DarkSeaGreen;
+            modernContainer14.ShadowColor = Color.Black;
+            modernContainer14.ShadowOpacity = 90;
+            modernContainer14.ShadowSize = 15;
+            modernContainer14.Size = new Size(85, 53);
+            modernContainer14.TabIndex = 2;
+            modernContainer14.Click += btnFinalizar_Click;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = Properties.Resources._5;
+            pictureBox6.Location = new Point(32, 17);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(22, 21);
+            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox6.TabIndex = 3;
+            pictureBox6.TabStop = false;
+            // 
+            // modernContainer15
+            // 
+            modernContainer15.BackColor = Color.Transparent;
+            modernContainer15.BorderRadius = 15;
+            modernContainer15.Controls.Add(pictureBox7);
+            modernContainer15.Location = new Point(282, 25);
+            modernContainer15.Name = "modernContainer15";
+            modernContainer15.PanelColor = Color.LightCoral;
+            modernContainer15.ShadowColor = Color.Black;
+            modernContainer15.ShadowOpacity = 90;
+            modernContainer15.ShadowSize = 15;
+            modernContainer15.Size = new Size(85, 53);
+            modernContainer15.TabIndex = 4;
+            modernContainer15.Click += btnEliminar_Click;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
+            pictureBox7.Location = new Point(32, 17);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(22, 21);
+            pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox7.TabIndex = 3;
+            pictureBox7.TabStop = false;
+            // 
+            // labelDescripcion3
+            // 
+            labelDescripcion3.AutoSize = true;
+            labelDescripcion3.ForeColor = Color.FromArgb(45, 55, 72);
+            labelDescripcion3.ImageAlign = ContentAlignment.BottomLeft;
+            labelDescripcion3.Location = new Point(25, 38);
+            labelDescripcion3.Name = "labelDescripcion3";
+            labelDescripcion3.Size = new Size(78, 15);
+            labelDescripcion3.TabIndex = 1;
+            labelDescripcion3.Text = "Descripción...";
+            // 
+            // labelActividad3
+            // 
+            labelActividad3.AutoSize = true;
+            labelActividad3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelActividad3.ForeColor = Color.FromArgb(45, 55, 72);
+            labelActividad3.Location = new Point(25, 18);
+            labelActividad3.Name = "labelActividad3";
+            labelActividad3.Size = new Size(92, 17);
+            labelActividad3.TabIndex = 0;
+            labelActividad3.Text = "No disponible";
+            // 
+            // modernContainer4
+            // 
+            modernContainer4.BackColor = Color.Transparent;
+            modernContainer4.BorderRadius = 15;
+            modernContainer4.Controls.Add(labelMinutos2);
+            modernContainer4.Controls.Add(modernContainer5);
+            modernContainer4.Controls.Add(modernContainer12);
+            modernContainer4.Controls.Add(labelDescripcion2);
+            modernContainer4.Controls.Add(labelActividad2);
+            modernContainer4.Location = new Point(15, 140);
+            modernContainer4.Name = "modernContainer4";
+            modernContainer4.PanelColor = Color.White;
+            modernContainer4.ShadowColor = Color.Black;
+            modernContainer4.ShadowOpacity = 255;
+            modernContainer4.ShadowSize = 10;
+            modernContainer4.Size = new Size(370, 86);
+            modernContainer4.TabIndex = 6;
+            // 
+            // labelMinutos2
+            // 
+            labelMinutos2.AutoSize = true;
+            labelMinutos2.ForeColor = Color.FromArgb(45, 55, 72);
+            labelMinutos2.ImageAlign = ContentAlignment.BottomLeft;
+            labelMinutos2.Location = new Point(170, 20);
+            labelMinutos2.Name = "labelMinutos2";
+            labelMinutos2.Size = new Size(92, 15);
+            labelMinutos2.TabIndex = 5;
+            labelMinutos2.Text = "- En (0) Minutos";
+            // 
+            // modernContainer5
+            // 
+            modernContainer5.BackColor = Color.Transparent;
+            modernContainer5.BorderRadius = 15;
+            modernContainer5.Controls.Add(pictureBox4);
+            modernContainer5.Location = new Point(211, 25);
+            modernContainer5.Name = "modernContainer5";
+            modernContainer5.PanelColor = Color.DarkSeaGreen;
+            modernContainer5.ShadowColor = Color.Black;
+            modernContainer5.ShadowOpacity = 90;
+            modernContainer5.ShadowSize = 15;
+            modernContainer5.Size = new Size(85, 53);
+            modernContainer5.TabIndex = 2;
+            modernContainer5.Click += btnFinalizar_Click;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = Properties.Resources._5;
+            pictureBox4.Location = new Point(32, 17);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(22, 21);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 3;
+            pictureBox4.TabStop = false;
+            // 
+            // modernContainer12
+            // 
+            modernContainer12.BackColor = Color.Transparent;
+            modernContainer12.BorderRadius = 15;
+            modernContainer12.Controls.Add(pictureBox5);
+            modernContainer12.Location = new Point(282, 25);
+            modernContainer12.Name = "modernContainer12";
+            modernContainer12.PanelColor = Color.LightCoral;
+            modernContainer12.ShadowColor = Color.Black;
+            modernContainer12.ShadowOpacity = 90;
+            modernContainer12.ShadowSize = 15;
+            modernContainer12.Size = new Size(85, 53);
+            modernContainer12.TabIndex = 4;
+            modernContainer12.Click += btnEliminar_Click;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(32, 17);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(22, 21);
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.TabIndex = 3;
+            pictureBox5.TabStop = false;
+            // 
+            // labelDescripcion2
+            // 
+            labelDescripcion2.AutoSize = true;
+            labelDescripcion2.ForeColor = Color.FromArgb(45, 55, 72);
+            labelDescripcion2.ImageAlign = ContentAlignment.BottomLeft;
+            labelDescripcion2.Location = new Point(25, 38);
+            labelDescripcion2.Name = "labelDescripcion2";
+            labelDescripcion2.Size = new Size(78, 15);
+            labelDescripcion2.TabIndex = 1;
+            labelDescripcion2.Text = "Descripción...";
+            // 
+            // labelActividad2
+            // 
+            labelActividad2.AutoSize = true;
+            labelActividad2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelActividad2.ForeColor = Color.FromArgb(45, 55, 72);
+            labelActividad2.Location = new Point(25, 18);
+            labelActividad2.Name = "labelActividad2";
+            labelActividad2.Size = new Size(92, 17);
+            labelActividad2.TabIndex = 0;
+            labelActividad2.Text = "No disponible";
+            // 
             // modernContainer3
             // 
             modernContainer3.BackColor = Color.Transparent;
@@ -269,6 +475,7 @@
             modernContainer10.ShadowSize = 15;
             modernContainer10.Size = new Size(85, 53);
             modernContainer10.TabIndex = 2;
+            modernContainer10.Click += btnFinalizar_Click;
             // 
             // pictureBox2
             // 
@@ -277,7 +484,7 @@
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(22, 21);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 3;
+            pictureBox2.TabIndex = 4;
             pictureBox2.TabStop = false;
             // 
             // modernContainer11
@@ -293,6 +500,7 @@
             modernContainer11.ShadowSize = 15;
             modernContainer11.Size = new Size(85, 53);
             modernContainer11.TabIndex = 4;
+            modernContainer11.Click += btnEliminar_Click;
             // 
             // pictureBox3
             // 
@@ -322,15 +530,15 @@
             labelActividad1.ForeColor = Color.FromArgb(45, 55, 72);
             labelActividad1.Location = new Point(25, 18);
             labelActividad1.Name = "labelActividad1";
-            labelActividad1.Size = new Size(149, 17);
+            labelActividad1.Size = new Size(92, 17);
             labelActividad1.TabIndex = 0;
-            labelActividad1.Text = "Nombre de la actividad";
+            labelActividad1.Text = "No disponible";
             // 
             // labelFecha
             // 
             labelFecha.AutoSize = true;
             labelFecha.ForeColor = Color.FromArgb(45, 55, 72);
-            labelFecha.Location = new Point(177, 32);
+            labelFecha.Location = new Point(349, 33);
             labelFecha.Name = "labelFecha";
             labelFecha.Size = new Size(36, 15);
             labelFecha.TabIndex = 1;
@@ -346,6 +554,17 @@
             labelNombre.Size = new Size(156, 21);
             labelNombre.TabIndex = 0;
             labelNombre.Text = "Nombre de la rutina";
+            // 
+            // pictureBox9
+            // 
+            pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
+            pictureBox9.Location = new Point(705, 35);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(30, 33);
+            pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox9.TabIndex = 11;
+            pictureBox9.TabStop = false;
+            pictureBox9.Click += pictureBox9_Click;
             // 
             // label2
             // 
@@ -371,6 +590,7 @@
             modernContainer1.ShadowSize = 15;
             modernContainer1.Size = new Size(196, 75);
             modernContainer1.TabIndex = 9;
+            modernContainer1.Click += AgTarea_Click;
             // 
             // label3
             // 
@@ -382,6 +602,7 @@
             label3.Size = new Size(126, 21);
             label3.TabIndex = 0;
             label3.Text = "Nueva actividad";
+            label3.Click += AgTarea_Click;
             // 
             // modernContainer6
             // 
@@ -522,217 +743,35 @@
             label4.TabIndex = 0;
             label4.Text = "Proximamente";
             // 
-            // modernContainer4
+            // pictureBox8
             // 
-            modernContainer4.BackColor = Color.Transparent;
-            modernContainer4.BorderRadius = 15;
-            modernContainer4.Controls.Add(labelMinutos2);
-            modernContainer4.Controls.Add(modernContainer5);
-            modernContainer4.Controls.Add(modernContainer12);
-            modernContainer4.Controls.Add(labelDescripcion2);
-            modernContainer4.Controls.Add(labelActividad2);
-            modernContainer4.Location = new Point(15, 140);
-            modernContainer4.Name = "modernContainer4";
-            modernContainer4.PanelColor = Color.White;
-            modernContainer4.ShadowColor = Color.Black;
-            modernContainer4.ShadowOpacity = 255;
-            modernContainer4.ShadowSize = 10;
-            modernContainer4.Size = new Size(370, 86);
-            modernContainer4.TabIndex = 6;
-            // 
-            // labelMinutos2
-            // 
-            labelMinutos2.AutoSize = true;
-            labelMinutos2.ForeColor = Color.FromArgb(45, 55, 72);
-            labelMinutos2.ImageAlign = ContentAlignment.BottomLeft;
-            labelMinutos2.Location = new Point(170, 20);
-            labelMinutos2.Name = "labelMinutos2";
-            labelMinutos2.Size = new Size(92, 15);
-            labelMinutos2.TabIndex = 5;
-            labelMinutos2.Text = "- En (0) Minutos";
-            // 
-            // modernContainer5
-            // 
-            modernContainer5.BackColor = Color.Transparent;
-            modernContainer5.BorderRadius = 15;
-            modernContainer5.Controls.Add(pictureBox4);
-            modernContainer5.Location = new Point(211, 25);
-            modernContainer5.Name = "modernContainer5";
-            modernContainer5.PanelColor = Color.DarkSeaGreen;
-            modernContainer5.ShadowColor = Color.Black;
-            modernContainer5.ShadowOpacity = 90;
-            modernContainer5.ShadowSize = 15;
-            modernContainer5.Size = new Size(85, 53);
-            modernContainer5.TabIndex = 2;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = Properties.Resources._5;
-            pictureBox4.Location = new Point(32, 17);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(22, 21);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 3;
-            pictureBox4.TabStop = false;
-            // 
-            // modernContainer12
-            // 
-            modernContainer12.BackColor = Color.Transparent;
-            modernContainer12.BorderRadius = 15;
-            modernContainer12.Controls.Add(pictureBox5);
-            modernContainer12.Location = new Point(282, 25);
-            modernContainer12.Name = "modernContainer12";
-            modernContainer12.PanelColor = Color.LightCoral;
-            modernContainer12.ShadowColor = Color.Black;
-            modernContainer12.ShadowOpacity = 90;
-            modernContainer12.ShadowSize = 15;
-            modernContainer12.Size = new Size(85, 53);
-            modernContainer12.TabIndex = 4;
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(32, 17);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(22, 21);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 3;
-            pictureBox5.TabStop = false;
-            // 
-            // labelDescripcion2
-            // 
-            labelDescripcion2.AutoSize = true;
-            labelDescripcion2.ForeColor = Color.FromArgb(45, 55, 72);
-            labelDescripcion2.ImageAlign = ContentAlignment.BottomLeft;
-            labelDescripcion2.Location = new Point(25, 38);
-            labelDescripcion2.Name = "labelDescripcion2";
-            labelDescripcion2.Size = new Size(78, 15);
-            labelDescripcion2.TabIndex = 1;
-            labelDescripcion2.Text = "Descripción...";
-            // 
-            // labelActividad2
-            // 
-            labelActividad2.AutoSize = true;
-            labelActividad2.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelActividad2.ForeColor = Color.FromArgb(45, 55, 72);
-            labelActividad2.Location = new Point(25, 18);
-            labelActividad2.Name = "labelActividad2";
-            labelActividad2.Size = new Size(149, 17);
-            labelActividad2.TabIndex = 0;
-            labelActividad2.Text = "Nombre de la actividad";
-            // 
-            // modernContainer13
-            // 
-            modernContainer13.BackColor = Color.Transparent;
-            modernContainer13.BorderRadius = 15;
-            modernContainer13.Controls.Add(labelMinutos3);
-            modernContainer13.Controls.Add(modernContainer14);
-            modernContainer13.Controls.Add(modernContainer15);
-            modernContainer13.Controls.Add(labelDescripcion3);
-            modernContainer13.Controls.Add(labelActividad3);
-            modernContainer13.Location = new Point(15, 232);
-            modernContainer13.Name = "modernContainer13";
-            modernContainer13.PanelColor = Color.White;
-            modernContainer13.ShadowColor = Color.Black;
-            modernContainer13.ShadowOpacity = 255;
-            modernContainer13.ShadowSize = 10;
-            modernContainer13.Size = new Size(370, 86);
-            modernContainer13.TabIndex = 7;
-            // 
-            // labelMinutos3
-            // 
-            labelMinutos3.AutoSize = true;
-            labelMinutos3.ForeColor = Color.FromArgb(45, 55, 72);
-            labelMinutos3.ImageAlign = ContentAlignment.BottomLeft;
-            labelMinutos3.Location = new Point(170, 20);
-            labelMinutos3.Name = "labelMinutos3";
-            labelMinutos3.Size = new Size(92, 15);
-            labelMinutos3.TabIndex = 5;
-            labelMinutos3.Text = "- En (0) Minutos";
-            // 
-            // modernContainer14
-            // 
-            modernContainer14.BackColor = Color.Transparent;
-            modernContainer14.BorderRadius = 15;
-            modernContainer14.Controls.Add(pictureBox6);
-            modernContainer14.Location = new Point(211, 25);
-            modernContainer14.Name = "modernContainer14";
-            modernContainer14.PanelColor = Color.DarkSeaGreen;
-            modernContainer14.ShadowColor = Color.Black;
-            modernContainer14.ShadowOpacity = 90;
-            modernContainer14.ShadowSize = 15;
-            modernContainer14.Size = new Size(85, 53);
-            modernContainer14.TabIndex = 2;
-            // 
-            // pictureBox6
-            // 
-            pictureBox6.Image = Properties.Resources._5;
-            pictureBox6.Location = new Point(32, 17);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(22, 21);
-            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox6.TabIndex = 3;
-            pictureBox6.TabStop = false;
-            // 
-            // modernContainer15
-            // 
-            modernContainer15.BackColor = Color.Transparent;
-            modernContainer15.BorderRadius = 15;
-            modernContainer15.Controls.Add(pictureBox7);
-            modernContainer15.Location = new Point(282, 25);
-            modernContainer15.Name = "modernContainer15";
-            modernContainer15.PanelColor = Color.LightCoral;
-            modernContainer15.ShadowColor = Color.Black;
-            modernContainer15.ShadowOpacity = 90;
-            modernContainer15.ShadowSize = 15;
-            modernContainer15.Size = new Size(85, 53);
-            modernContainer15.TabIndex = 4;
-            // 
-            // pictureBox7
-            // 
-            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(32, 17);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(22, 21);
-            pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox7.TabIndex = 3;
-            pictureBox7.TabStop = false;
-            // 
-            // labelDescripcion3
-            // 
-            labelDescripcion3.AutoSize = true;
-            labelDescripcion3.ForeColor = Color.FromArgb(45, 55, 72);
-            labelDescripcion3.ImageAlign = ContentAlignment.BottomLeft;
-            labelDescripcion3.Location = new Point(25, 38);
-            labelDescripcion3.Name = "labelDescripcion3";
-            labelDescripcion3.Size = new Size(78, 15);
-            labelDescripcion3.TabIndex = 1;
-            labelDescripcion3.Text = "Descripción...";
-            // 
-            // labelActividad3
-            // 
-            labelActividad3.AutoSize = true;
-            labelActividad3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelActividad3.ForeColor = Color.FromArgb(45, 55, 72);
-            labelActividad3.Location = new Point(25, 18);
-            labelActividad3.Name = "labelActividad3";
-            labelActividad3.Size = new Size(149, 17);
-            labelActividad3.TabIndex = 0;
-            labelActividad3.Text = "Nombre de la actividad";
+            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
+            pictureBox8.Location = new Point(741, 31);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(35, 37);
+            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox8.TabIndex = 4;
+            pictureBox8.TabStop = false;
+            pictureBox8.Click += Cuenta_Click;
             // 
             // FormInicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox9);
+            Controls.Add(pictureBox8);
             Controls.Add(modernContainer6);
             Controls.Add(modernContainer1);
             Controls.Add(label2);
             Controls.Add(modernContainer2);
             Controls.Add(panelContenedor);
             Controls.Add(label1);
+            Cursor = Cursors.Hand;
             Name = "FormInicio";
-            Text = "FormInicio";
+            Text = "Daily Routine";
+            Load += FormInicio_Load;
+            Click += Cuenta_Click;
             panelContenedor.ResumeLayout(false);
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
@@ -743,12 +782,25 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             modernContainer2.ResumeLayout(false);
             modernContainer2.PerformLayout();
+            modernContainer13.ResumeLayout(false);
+            modernContainer13.PerformLayout();
+            modernContainer14.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            modernContainer15.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            modernContainer4.ResumeLayout(false);
+            modernContainer4.PerformLayout();
+            modernContainer5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            modernContainer12.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             modernContainer3.ResumeLayout(false);
             modernContainer3.PerformLayout();
             modernContainer10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             modernContainer11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             modernContainer1.ResumeLayout(false);
             modernContainer1.PerformLayout();
             modernContainer6.ResumeLayout(false);
@@ -759,18 +811,7 @@
             modernContainer8.PerformLayout();
             modernContainer7.ResumeLayout(false);
             modernContainer7.PerformLayout();
-            modernContainer4.ResumeLayout(false);
-            modernContainer4.PerformLayout();
-            modernContainer5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            modernContainer12.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            modernContainer13.ResumeLayout(false);
-            modernContainer13.PerformLayout();
-            modernContainer14.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            modernContainer15.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -806,7 +847,6 @@
         private Label labelProxT3;
         private Label labelProxT2;
         private ModernContainer modernContainer10;
-        private PictureBox pictureBox2;
         private ModernContainer modernContainer11;
         private PictureBox pictureBox3;
         private Label labelMinutos1;
@@ -826,5 +866,8 @@
         private PictureBox pictureBox5;
         private Label labelDescripcion2;
         private Label labelActividad2;
+        private PictureBox pictureBox8;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox9;
     }
 }

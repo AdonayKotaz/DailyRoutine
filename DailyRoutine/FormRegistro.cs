@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySqlConnector;
 
+// Versión: 1.0.1 - Migración a Dell Latitude 7420
+// Cambio: Ajuste de DPI y limpieza de base de datos.
+// Autor: Cota
+
 namespace DailyRoutine
 {
     public partial class FormRegistro : Form

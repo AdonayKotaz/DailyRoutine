@@ -244,7 +244,7 @@
             Controls.Add(pictureBox2);
             Controls.Add(panel1);
             Name = "FormRegistro";
-            Text = "FormRegistro";
+            Text = "Daily Routine";
             Load += FormRegistro_Load_1;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

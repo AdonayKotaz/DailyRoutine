@@ -11,6 +11,11 @@ namespace DailyRoutine
         // Aquí guardaremos el ID del usuario que logueó correctamente
         public static int IdUsuario { get; set; }
         public static string Correo { get; set; }
+        public static void LimpiarSesion()
+        {
+            IdUsuario = 0;
+            Correo = string.Empty;
+        }
     }
 
 }

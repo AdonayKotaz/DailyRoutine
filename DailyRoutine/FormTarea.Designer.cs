@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             modernContainer1 = new ModernContainer();
+            label3 = new Label();
             modernContainer4 = new ModernContainer();
             label2 = new Label();
             cmbRutinas = new ComboBox();
@@ -38,7 +39,6 @@
             modernContainer2 = new ModernContainer();
             textBox1 = new TextBox();
             label1 = new Label();
-            label3 = new Label();
             modernContainer1.SuspendLayout();
             modernContainer4.SuspendLayout();
             modernContainer3.SuspendLayout();
@@ -64,6 +64,19 @@
             modernContainer1.ShadowSize = 15;
             modernContainer1.Size = new Size(344, 383);
             modernContainer1.TabIndex = 0;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = SystemColors.ControlDarkDark;
+            label3.Location = new Point(32, 239);
+            label3.Name = "label3";
+            label3.RightToLeft = RightToLeft.No;
+            label3.Size = new Size(56, 21);
+            label3.TabIndex = 6;
+            label3.Text = "Rutina";
+            label3.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // modernContainer4
             // 
@@ -130,10 +143,13 @@
             // 
             textBox2.BackColor = Color.WhiteSmoke;
             textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Location = new Point(34, 23);
+            textBox2.Location = new Point(34, 29);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(217, 16);
             textBox2.TabIndex = 1;
+            textBox2.TextChanged += textBox2_TextChanged;
+            textBox2.Enter += textBox2_Enter;
+            textBox2.Leave += textBox2_Leave;
             // 
             // modernContainer2
             // 
@@ -153,10 +169,12 @@
             // 
             textBox1.BackColor = Color.WhiteSmoke;
             textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(34, 23);
+            textBox1.Location = new Point(34, 28);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(217, 16);
             textBox1.TabIndex = 0;
+            textBox1.Enter += textBox1_Enter;
+            textBox1.Leave += textBox1_Leave;
             // 
             // label1
             // 
@@ -165,31 +183,18 @@
             label1.ForeColor = Color.FromArgb(45, 55, 72);
             label1.Location = new Point(32, 34);
             label1.Name = "label1";
-            label1.Size = new Size(130, 25);
+            label1.Size = new Size(164, 25);
             label1.TabIndex = 0;
-            label1.Text = "Agregar tarea";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.ControlDarkDark;
-            label3.Location = new Point(32, 239);
-            label3.Name = "label3";
-            label3.RightToLeft = RightToLeft.No;
-            label3.Size = new Size(56, 21);
-            label3.TabIndex = 6;
-            label3.Text = "Rutina";
-            label3.TextAlign = ContentAlignment.MiddleLeft;
+            label1.Text = "Agregar actividad";
             // 
             // FormTarea
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(368, 411);
+            ClientSize = new Size(367, 411);
             Controls.Add(modernContainer1);
             Name = "FormTarea";
-            Text = "FormTarea";
+            Text = "Agregar Tarea";
             Load += FormTarea_Load;
             modernContainer1.ResumeLayout(false);
             modernContainer1.PerformLayout();
