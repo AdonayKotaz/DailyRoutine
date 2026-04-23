@@ -110,8 +110,8 @@ namespace DailyRoutine
                     conexion.Open();
 
                     // --- INTENTO 1: LOGIN COMO USUARIO ---
-                    // Solo pedimos Id_usuario y Gmail (ya que no hay 'Nombre')
-                    string queryUser = "SELECT Id_usuario, Gmail FROM usuario WHERE Gmail = @correo AND contrasena = @pass";
+                    // Agregamos BINARY antes de la columna contrasena
+                    string queryUser = "SELECT Id_usuario, Gmail FROM usuario WHERE Gmail = @correo AND BINARY contrasena = @pass";
                     MySqlCommand cmdUser = new MySqlCommand(queryUser, conexion);
                     cmdUser.Parameters.AddWithValue("@correo", correoOUser);
                     cmdUser.Parameters.AddWithValue("@pass", pass);
@@ -121,7 +121,6 @@ namespace DailyRoutine
                         if (readerUser.Read())
                         {
                             UsuarioSesion.IdUsuario = Convert.ToInt32(readerUser["Id_usuario"]);
-                            // Usamos el Gmail como nombre ya que no hay columna Nombre
                             UsuarioSesion.Correo = readerUser["Gmail"].ToString();
 
                             MessageBox.Show("¡Bienvenido!");
@@ -132,8 +131,8 @@ namespace DailyRoutine
                     }
 
                     // --- INTENTO 2: LOGIN COMO ADMINISTRADOR ---
-                    // Aquí sí usamos 'Nombre' porque en la tabla administrador sí existe
-                    string queryAdmin = "SELECT Id_Admin, Nombre FROM administrador WHERE Nombre = @nom AND Contraseña = @pass";
+                    // Aplicamos BINARY también en la tabla administrador
+                    string queryAdmin = "SELECT Id_Admin, Nombre FROM administrador WHERE Nombre = @nom AND BINARY Contraseña = @pass";
                     MySqlCommand cmdAdmin = new MySqlCommand(queryAdmin, conexion);
                     cmdAdmin.Parameters.AddWithValue("@nom", correoOUser);
                     cmdAdmin.Parameters.AddWithValue("@pass", pass);

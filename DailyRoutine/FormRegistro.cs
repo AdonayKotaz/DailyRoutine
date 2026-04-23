@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySqlConnector;
 
-// Versión: 1.0.1 - Migración a Dell Latitude 7420
-// Cambio: Ajuste de DPI y limpieza de base de datos.
-// Autor: Cota
+// Versión: 1.1.2 - Ajuste de interfaz Administrativa
+// Cambio: Se corrigieron errores de iconos en el area administrativa.
+// Autor: Cota 
 
 namespace DailyRoutine
 {
